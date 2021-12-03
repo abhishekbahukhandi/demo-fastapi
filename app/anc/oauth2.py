@@ -1,12 +1,12 @@
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
-from .database import get_db
-import anc.schema as schema
-import anc.models as models
+from app.anc.database import get_db
+import app.anc.schema as schema
+import app.anc.models as models
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
-from .config import settings
+from app.anc.config import settings
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl = "login")
 

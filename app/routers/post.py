@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
-from anc.database import get_db
+from app.anc.database import get_db
 from fastapi import status, HTTPException, Response, Depends, APIRouter
-from anc.schema import PostCreate, PostResponse, UserResponse, PostResponse_With_Votes
-import anc.models as models, anc.oauth2 as oauth2
+from app.anc.schema import PostCreate, PostResponse, UserResponse, PostResponse_With_Votes
+import app.anc.models as models, app.anc.oauth2 as oauth2
 from sqlalchemy import func
 from typing import List, Optional
 

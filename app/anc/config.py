@@ -1,5 +1,6 @@
+from posixpath import relpath
 from pydantic import BaseSettings
-import os
+
 class Settings(BaseSettings):
     database_hostname: str
     database_port: str
@@ -11,5 +12,6 @@ class Settings(BaseSettings):
     access_token_expire_minutes: str
 
     class Config:
-        env_file = "~/Desktop/python_files/fastapi_project/.env"
+        env_file = ".env"
+
 settings = Settings()

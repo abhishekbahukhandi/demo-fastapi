@@ -1,9 +1,10 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.sql.functions import user
-from anc.database import get_db
+from app.anc.database import get_db
 from fastapi import status, HTTPException, Response, Depends, APIRouter
-from anc.schema import UserResponse, VoteData
-import anc.models as models, anc.oauth2 as oauth2
+from app.anc.schema import UserResponse, VoteData
+import app.anc.models as models
+import app.anc.oauth2 as oauth2
 
 router = APIRouter(
     prefix = "/vote",

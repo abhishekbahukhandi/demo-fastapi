@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 #from anc.database import engine
 #import anc.models
-from routers import post, user, auth, vote
-from anc.config import settings
+from app.routers import post, user, auth, vote
+from app.anc.config import settings
+
 #from fastapi.middleware.cors import CORSMiddleware
 #models.Base.metadata.create_all(bind=engine)
 

@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
-from anc.database import get_db
+from app.anc.database import get_db
 from fastapi import status, HTTPException, Depends, APIRouter
-from anc.schema import UserCreate, UserResponse
-from anc.utils import hash_password
-import anc.models as models
+from app.anc.schema import UserCreate, UserResponse
+from app.anc.utils import hash_password
+import app.anc.models as models
  
 router = APIRouter(
     prefix = "/users",

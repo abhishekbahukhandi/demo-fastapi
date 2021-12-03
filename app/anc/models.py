@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql.sqltypes import INT, INTEGER, TIMESTAMP
 from sqlalchemy.sql.expression import text
-from .database import Base
+from app.anc.database import Base
 
 class Post(Base):
     __tablename__ = 'posts'
