@@ -30,7 +30,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 def get_user():
-    return {"message": "Hello World"}
+    return {"message": "!!Hello World!!"}
 
 @app.get("/request")
 def get_request():
