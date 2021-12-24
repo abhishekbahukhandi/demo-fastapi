@@ -4,6 +4,8 @@ on: [push, pull_request]
 
 jobs:
   job1:
+    environment:
+      name: testing
     env:
       DATABASE_HOSTNAME: ${{ secrets.DATABASE_HOSTNAME }}
       DATABASE_PORT: ${{ secrets.DATABASE_PORT }}
@@ -19,7 +21,7 @@ jobs:
         image: postgres
         env:
           POSTGRES_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
-          POSRGRES_DATABASE: ${{ secrets.DATABASE_NAME }}
+          POSRGRES_DATABASE: ${{ secrets.DATABASE_NAME }}_test
         ports: 
           - 5432:5432
         options: >-
