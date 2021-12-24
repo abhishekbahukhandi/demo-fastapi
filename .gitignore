@@ -4,3 +4,4 @@ env/
 docker-compose-dev.yml
 test_first.py
 database_test.py
+tests
