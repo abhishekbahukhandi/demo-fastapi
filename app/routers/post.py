@@ -65,9 +65,8 @@ def delete_post(id: int, db: Session = Depends(get_db), current_user: UserRespon
 def update_post(id: int, post: PostCreate, db: Session = Depends(get_db), current_user: UserResponse = Depends(oauth2.get_current_user)):
     # cur.execute("""UPDATE posts SET title=%s, content=%s, published=%s WHERE id=%s RETURNING *""", (post.title, post.content, post.published, id))
     # conn.commit()
-    
-    post_query  = db.query(models.Post).filter(models.Post.id==id)
-    
+        
+    post_query = db.query(models.Post).filter(models.Post.id==id)
     if post_query.first() is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, detail=f"Could not process the request")
     

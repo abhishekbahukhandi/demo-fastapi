@@ -13,7 +13,6 @@ router = APIRouter(
 @router.post("/", status_code = status.HTTP_201_CREATED, response_model = UserResponse)
 def create_user(user: UserCreate,db: Session = Depends(get_db)):
     #hashing password using hash_password from utils.py
-
     user.password = hash_password(user.password)
     try:
         new_user = models.User(**user.dict())
