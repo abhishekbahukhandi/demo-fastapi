@@ -9,7 +9,7 @@ from app.anc.oauth2 import create_access_token
 from app.anc import models
 #from alembic import command
 
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:rootpass1234@localhost:5432/test_db"
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:rootpass1234@localhost:5432/fastapi_app_test"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
